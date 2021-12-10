@@ -1,0 +1,38 @@
+.listContainer { display: flex; }
+
+.list { width: 70%; margin-top: 10px; }
+
+table { width: 100%;
+    margin-top: 10px;}
+table, th, td { border-collapse:  collapse; }
+table thead tr th{padding: 10px 0; border-top: 4px solid #4c2df8; border-bottom: 2px solid #4c2df8;}
+th, td{ border-bottom: 1px solid #ebebeb; }
+.tableList:hover { background-color: #e7e2ff; cursor: pointer;}
+
+thead th:first-child { border-left: 0; }
+thead th:last-child { border-right: 0; }
+
+tbody td:first-child { border-left: 0; text-align: center;}
+tbody td:last-child { border-right: 0; }
+.rightDiv { display: flex; flex-direction: column; width: 28%; margin-left: 2%; box-sizing: border-box;}
+.detailLogin{width: 100%;}
+.userDiv { display: flex; background-color: #ebebeb;  justify-content: center; align-items: center; padding: 100px 20px; box-sizing: border-box; }
+.userDiv div input { text-decoration: none; color: #000; background-color: #fff; line-height: 25px; border: 1px solid #ccc ;
+    border-radius: 5px; padding: 5px;}
+.userDiv div > a{padding: 0; margin: 0 3px; text-align: center;}
+.userDiv div > a input{width: 100%;}
+.idpw_input {width: 100%; margin-bottom: 2px;}
+.idpw_input input[type='text'],
+.idpw_input input[type='password'] {width: 100%;}
+.flex-input-box input { border-radius: 5px; background-color: black; color: white; }
+.listLogin p { color: black; font-weight: bold;}
+#rowCnt { padding: 1px 30px; }
+.unDefined { width: 70%; }
+.flex-input-box{display: flex; justify-content: space-between; align-items: center;}
+.flex-input-box > *{flex-grow: 1;}
+.flex-input-box input:active { background-color: #ebebeb; }
+
+.thisPage { color: red; }
+.page{text-align: center; margin: 10px 0}
+.page a { text-decoration: none; color: black; padding: 0 5px;}
+.page a:hover { color: orangered; }

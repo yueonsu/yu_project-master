@@ -1,0 +1,18 @@
+.board-body{width: 900px; margin: 0 auto;}
+.board-tit{padding: 10px 0; font-size: 20px;font-weight: 600;}
+.board-info{border-bottom: 1px solid #ccc; padding-bottom: 10px; color: #878787;display: flex;
+    justify-content: flex-end; align-items: center; text-align: right;}
+.board-info > *{padding: 0 10px; position: relative;}
+.board-info > *:after{content: "|"; position: absolute; right: -2px; top: 0; color: #dbdbdb;}
+.board-info span:last-child{padding-right: 0;}
+.board-info span:last-child:after{display: none;}
+.board-ctnt span{display: inline-block; height: 350px; width: 100%;}
+.board-btn{text-align: right;}
+.board-btn a{box-shadow: 0 0 3px #999; border-radius: 50px; margin-left: 5px;
+    background: #fff; padding: 5px 20px; transition: 0.3s;}
+.board-btn a:first-child{box-shadow: 0 0 3px #f00; }
+.board-btn a:last-child{box-shadow: 0 0 3px #4c2df8; }
+.board-btn a:first-child:hover{background: #f00; box-shadow: 0 0 3px #999;}
+.board-btn a:last-child:hover{background: #4c2df8; box-shadow: 0 0 3px #999;}
+.board-btn a button{color: #000; border: 0; background: transparent; vertical-align: text-bottom; cursor: pointer;}
+.board-btn a:hover button{color: #fff;}
