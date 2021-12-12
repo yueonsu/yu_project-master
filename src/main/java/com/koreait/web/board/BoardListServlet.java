@@ -22,7 +22,7 @@ public class BoardListServlet extends HttpServlet {
         int page = Utils.getParameterInt(req, "page", 1);
         int searchType = Utils.getParameterInt(req, "searchType", 0);
         String searchText = req.getParameter("searchText");
-        int rowCnt = Utils.getParameterInt(req, "rowCnt", 5);
+        int rowCnt = Utils.getParameterInt(req, "rowCnt", 20);
 
         BoardDTO param = new BoardDTO();
         param.setPage(page);

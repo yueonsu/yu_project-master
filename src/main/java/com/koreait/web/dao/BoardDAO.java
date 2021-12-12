@@ -29,6 +29,27 @@ public class BoardDAO {
         }
     }
 
+    public static int getWriter(BoardDTO param) {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        String sql = "SELECT writer FROM t_board WHERE iboard = ?";
+        try {
+            con = DbUtils.getCon();
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, param.getIboard());
+            rs = ps.executeQuery();
+            if(rs.next()) {
+                return rs.getInt(1);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DbUtils.close(con, ps, rs);
+        }
+        return 0;
+    }
+
     public static int insBoardWithPk(BoardEntity entity) {
         int result = 0;
         Connection con = null;
@@ -211,6 +232,24 @@ public class BoardDAO {
             ps.setString(2, entity.getCtnt());
             ps.setInt(3, entity.getIboard());
             ps.setInt(4, entity.getWriter());
+            return ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DbUtils.close(con, ps);
+        }
+        return 0;
+    }
+
+    public static int delBoard(BoardEntity entity) {
+        Connection con = null;
+        PreparedStatement ps = null;
+        String sql = "DELETE FROM t_board WHERE iboard= ? AND writer = ? ";
+        try {
+            con = DbUtils.getCon();
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, entity.getIboard());
+            ps.setInt(2, entity.getWriter());
             return ps.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();

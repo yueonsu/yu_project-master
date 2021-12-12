@@ -38,6 +38,14 @@ public class Utils {
         return (UserEntity) hs.getAttribute("loginUser");
     }
 
+    public static int getLoginUserPk(HttpServletRequest req, int defVal) {
+        try {
+            return getLoginUserPk(req);
+        } catch (Exception e) {
+            return defVal;
+        }
+    }
+
     public static int getLoginUserPk(HttpServletRequest req) {
         UserEntity entity = getLoginUser(req);
         return entity.getIuser();

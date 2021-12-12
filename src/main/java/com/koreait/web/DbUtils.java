@@ -9,7 +9,7 @@ public class DbUtils {
         final String PASSWORD = "koreait";
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-        System.out.println("접속 성공!");
+        System.out.println("접속성공");
         return con;
     }
 
